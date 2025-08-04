@@ -1,17 +1,17 @@
 import time
 
-start_number = input("Enter a start number: ")
-message = input("Enter your final messages: ")
+#start_number = input("Enter a start number: ")
+#message = input("Enter your final messages: ")
 #print(type(start_number))
 
-# For loop
-if start_number.isdigit() and int(start_number) > 0:
-    for i in range(int(start_number), 0, -1):
-        print(i)
-        time.sleep(1)
-    print(message)
-else:
-    print("Please enter a positive integer.")
+# # For loop
+# if start_number.isdigit() and int(start_number) > 0:
+#     for i in range(int(start_number), 0, -1):
+#         print(i)
+#         time.sleep(1)
+#     print(message)
+# else:
+#     print("Please enter a positive integer.")
 
 ## For while loop
 # current_number = int(start_number)
@@ -22,6 +22,24 @@ else:
 #     current_number -= 1
 #
 # print("Enter your final message: Go! ")
+
+'''
+Solution 2:
+'''
+try:
+    start = int(input("Enter a Starting number: ").strip())
+    if start <= 0:
+        print("Please enter a positive integer.")
+    else:
+        message = input("Enter your final message: ").strip()
+        for i in range(start, 0, -1):
+            print(i)
+            time.sleep(1)
+        print(message)
+except ValueError:
+    print("Please enter a valid integer.")
+
+
 
 
 '''
